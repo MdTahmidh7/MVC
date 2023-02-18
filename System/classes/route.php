@@ -43,15 +43,15 @@ class route
             }else{
                 $this->parameter = [];
             }
-            if(!empty($this->parameter)){
-                call_user_func_array([$this->controller,$this->method],$this->parameter);
-            }
-            else{
-                echo "Parameters are required";
-            }
+            // if(!empty($this->parameter)){
+            //     call_user_func_array([$this->controller,$this->method],$this->parameter);
+            // }
+            // else{
+            //     echo "Parameters are required";
+            // }
         }
 
-        // call_user_func_array([$this->controller,$this->method],$this->parameter);
+         call_user_func_array([$this->controller,$this->method],$this->parameter);
     }
     public function url(){
         if (isset($_GET['url'])) {
